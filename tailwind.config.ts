@@ -18,12 +18,26 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				serif: 'var(--font-serif)',
+				sans: 'var(--font-sans)',
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				// Tavern color palette
+				wood: {
+					dark: 'hsl(var(--wood-dark))',
+					medium: 'hsl(var(--wood-medium))',
+					light: 'hsl(var(--wood-light))',
+				},
+				forest: 'hsl(var(--forest-green))',
+				tavern: 'hsl(var(--tavern-red))',
+				brass: 'hsl(var(--brass-gold))',
+				cream: 'hsl(var(--warm-cream))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))'
