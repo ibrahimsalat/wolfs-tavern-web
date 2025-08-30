@@ -23,21 +23,98 @@ const Gallery = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {galleryImages.map((image) => (
-            <div 
-              key={image.id} 
-              className="aspect-square bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-colors duration-300"
-            >
-              <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
-                <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
-                  <div className="text-4xl mb-2">📷</div>
-                  <p className="text-sm font-medium">Add Your Photo</p>
-                  <p className="text-xs mt-1 px-2">{image.alt}</p>
-                </div>
+        <div className="grid grid-cols-12 grid-rows-6 gap-4 h-[600px] md:h-[800px]">
+          {/* Large featured image */}
+          <div className="col-span-12 md:col-span-6 row-span-3 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-5xl mb-3">📷</div>
+                <p className="text-lg font-medium">Featured Photo</p>
+                <p className="text-sm mt-2 px-4">{galleryImages[0].alt}</p>
               </div>
             </div>
-          ))}
+          </div>
+
+          {/* Medium vertical image */}
+          <div className="col-span-6 md:col-span-3 row-span-2 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-3xl mb-2">📷</div>
+                <p className="text-sm font-medium">Add Photo</p>
+                <p className="text-xs mt-1 px-2">{galleryImages[1].alt}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Small square image */}
+          <div className="col-span-6 md:col-span-3 row-span-1 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-2xl mb-1">📷</div>
+                <p className="text-xs font-medium">Photo</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Wide horizontal image */}
+          <div className="col-span-12 md:col-span-6 row-span-1 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-3xl mb-1">📷</div>
+                <p className="text-sm font-medium">Wide Photo</p>
+                <p className="text-xs mt-1 px-2">{galleryImages[2].alt}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Medium square images */}
+          <div className="col-span-6 md:col-span-3 row-span-2 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-3xl mb-2">📷</div>
+                <p className="text-sm font-medium">Add Photo</p>
+                <p className="text-xs mt-1 px-2">{galleryImages[3].alt}</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-6 md:col-span-3 row-span-2 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-3xl mb-2">📷</div>
+                <p className="text-sm font-medium">Add Photo</p>
+                <p className="text-xs mt-1 px-2">{galleryImages[4].alt}</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Small images row */}
+          <div className="col-span-4 row-span-1 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-2xl">📷</div>
+                <p className="text-xs font-medium mt-1">Photo</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-4 row-span-1 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-2xl">📷</div>
+                <p className="text-xs font-medium mt-1">Photo</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="col-span-4 row-span-1 bg-wood-medium border-2 border-brass/20 rounded-lg overflow-hidden group hover:border-brass/40 transition-all duration-300 hover:scale-[1.02]">
+            <div className="w-full h-full bg-gradient-to-br from-wood-medium to-wood-dark flex items-center justify-center group-hover:from-wood-dark group-hover:to-wood-medium transition-all duration-300">
+              <div className="text-center text-brass/60 group-hover:text-brass/80 transition-colors">
+                <div className="text-2xl">📷</div>
+                <p className="text-xs font-medium mt-1">Photo</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="text-center mt-8">
